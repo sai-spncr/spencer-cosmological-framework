@@ -5,6 +5,12 @@
 > *A Complete Scientific Alternative to the Standard ΛCDM Paradigm:*  
 > *Infinite Space · Finite Matter · Known Forces · Regional Events*
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20355508.svg)](https://doi.org/10.5281/zenodo.20355508)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0001--4869--0317-brightgreen?logo=orcid&logoColor=white)](https://orcid.org/0009-0001-4869-0317)
+
+**Zenodo DOI:** https://doi.org/10.5281/zenodo.20355508  
+**ORCID:** https://orcid.org/0009-0001-4869-0317
+
 ---
 
 ## Overview
@@ -123,73 +129,3 @@ Computes the Integrated Sachs-Wolfe temperature shift from the evolving KBC void
 ---
 
 ## Repository Structure
-spencer-cosmological-framework/
-├── validate_framework.py                    # Master pipeline — all 7 engines
-├── spencer_master_log.json                  # Machine-readable output (all 7 PASS)
-├── Spencer_Cosmological_Framework_figures.py  # Generates all 10 thesis figures
-├── README.md                                # This file
-├── LICENSE
-└── .gitignore
-
----
-
-## Requirements
-Python >= 3.10
-numpy
-scipy
-matplotlib   # only required for figure generation
-
-Install: `pip install numpy scipy matplotlib`
-
-No additional cosmology packages (CAMB, CLASS, Astropy, etc.) are required. Both scripts are fully self-contained.
-
----
-
-## Physical Framework Summary
-
-The Spencer Framework is built on five foundational principles, all within standard General Relativity:
-
-1. **The universe is spatially infinite** — the observable universe is our regional event bubble, not the full extent of space.
-2. **Matter and energy are finite and eternal** — conservation of mass-energy applied at cosmological scales.
-3. **Known physical forces are sufficient** — ten established mechanisms govern all observed dynamics across three scale-dependent regimes (the Three-Gear Model).
-4. **The Big Bang was a regional astronomical event** — gravitational collapse and pressure-driven rebound of pre-existing baryonic matter, proved by Engine 5.
-5. **No dark energy, no dark matter particles, no cosmological constant, no inflation.**
-
-The LTB (Lemaître–Tolman–Bondi) metric provides the exact GR solution. The KBC void `E(r)` profile simultaneously reproduces: SNe Ia Hubble diagram (Engine 1), CMB acoustic scale (Engine 2), Hubble tension resolution, and BAO angular scales — from a **single ODE integration with three parameters**.
-
----
-
-## Logging Schema
-
-Every engine run appends to `spencer_master_log.json`. The original run (timestamp `2026-05-19T21:27:09 UTC`) is permanently preserved; subsequent runs append new entries with updated timestamps, allowing independent reproducibility verification:
-
-```json
-{
-  "timestamp": "2026-05-19T21:27:09.320913+00:00",
-  "engine_id": "E1_LTB_SNe_Fitter",
-  "parameters": { "H_mean_init": 67.4, "dH_init": 5.6, "sigma_init": 0.2 },
-  "results": {
-    "status": "PASS",
-    "H_mean_km_s_Mpc": 70.5693,
-    "dH_km_s_Mpc": 2.2019,
-    "sigma_z": 1.5,
-    "chi2_per_dof": 1.5572,
-    "H_local_z0_km_s_Mpc": 72.7713,
-    "verdict": "RESOLVED — ..."
-  }
-}
-```
-
----
-
-## Citation / Contact
-
-**Author:** Saisurya  
-**Thesis:** *The Spencer Cosmological Framework — A Complete Scientific Alternative to the Standard ΛCDM Paradigm*  
-**Validation log:** `spencer_master_log.json` (timestamp: 2026-05-19T21:27:09 UTC, all 7 engines PASS)
-
----
-
-## License
-
-See [LICENSE](LICENSE) for terms.
